@@ -17,14 +17,14 @@ app.use(express.json());
 // Host Static files let the CSS and JS files can be retrieved
 app.use(express.static("public"));
 
-var MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost/workout";
+var MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://Learning-Mongodb:0oRn2gn0yRCvJ8nP@cluster0.fhkvl.mongodb.net/test";
 mongoose.connect(MONGODB_URL,{
     useNewUrlParser:true,
     userFindAndModify:false
 })
 
-require("./apiRouts")(app);
-require("./apiRouts")(app);
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRouts")(app);
 
 
 app.listen(PORT, () => {
