@@ -4,7 +4,7 @@ let db = require("../models");
 mongoose.connect("mongodb://localhost/Learning-Mongodb", {
   useNewUrlParser:true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
+    // useCreateIndex: true,
     userFindAndModify:false
 });
 

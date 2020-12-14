@@ -21,13 +21,15 @@ var MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost/Learning-Mongo
 mongoose.connect(MONGODB_URL,{
     useNewUrlParser:true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
+    // useCreateIndex: true,
     userFindAndModify:false
 })
 
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRouts")(app);
+const apiRoutes = require("./routes/apiRoutes")(app);
+const htmlRouts = require("./routes/htmlRouts")(app);
 
+app.use(htmlRouts);
+app.use(apiRoutes);
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
