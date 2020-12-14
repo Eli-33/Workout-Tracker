@@ -2,7 +2,7 @@ const workout = require("../models/workout")
 
 module.exports = function (app) {
     app.get('/api/workouts',function(req,res){
-        workout.find()
+        workout.find({})
         .then(data =>{
             res.json(data)
         })
@@ -20,7 +20,7 @@ module.exports = function (app) {
     });
 
     app.get("/api/workouts/range",function(req,res){  
-        workout.find()
+        workout.find({})
         .then(data =>{  
             res.json(data)
         })
