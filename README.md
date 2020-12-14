@@ -2,7 +2,7 @@
 
 ## Table of Contents
   * [Description](#Description)
-  * [Technologiesused](#Technologies used)
+  * [Technologiesused](#Technologies-used)
   * [Installation](#installation)
   * [Usage](#usage)
   * [Images](#images)
