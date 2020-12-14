@@ -1,7 +1,7 @@
 const workout = require("../models/workout")
 
 module.exports = function (app) {
-    app.get('api/workouts',function(req,res){
+    app.get('/api/workouts',function(req,res){
         workout.find()
         .then(data =>{
             res.json(data)
