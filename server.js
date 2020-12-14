@@ -21,7 +21,7 @@ var MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost/Learning-Mongo
 mongoose.connect(MONGODB_URL,{
     useNewUrlParser:true,
     useUnifiedTopology: true,
-    // useCreateIndex: true,
+    useCreateIndex: true,
     userFindAndModify:false
 })
 
