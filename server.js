@@ -17,9 +17,11 @@ app.use(express.json());
 // Host Static files let the CSS and JS files can be retrieved
 app.use(express.static("public"));
 
-var MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://Learning-Mongodb:0oRn2gn0yRCvJ8nP@cluster0.fhkvl.mongodb.net/test";
+var MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost/Learning-Mongodb";
 mongoose.connect(MONGODB_URL,{
     useNewUrlParser:true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
     userFindAndModify:false
 })
 
