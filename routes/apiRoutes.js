@@ -1,8 +1,8 @@
-const workout = require("../models/workout")
+const Workout = require("../models/workout")
 
 module.exports = function (app) {
     app.get('/api/workouts',function(req,res){
-        workout.find({})
+        Workout.find({})
         .sort({date: -1})
         .then(data =>{
             res.json(data)
@@ -13,9 +13,9 @@ module.exports = function (app) {
     });
 
     app.post("/api/workouts",function ({ body },res){
-        const workoutN = new Workout(body);
+        const WorkoutN = new Workout(body);
 
-        workout.create({workoutN})
+        Workout.create({WorkoutN})
         .then(data => res.json(data))
         .catch(err => {
             res.json(err)
@@ -23,7 +23,7 @@ module.exports = function (app) {
     });
 
     app.get("/api/workouts/range",function(req,res){  
-        workout.find({})
+        Workout.find({})
         .then(data =>{  
             res.json(data)
         })
@@ -34,7 +34,7 @@ module.exports = function (app) {
 
 
     // app.post("/api/workouts/range",function (req,res){    
-    //     workout.create({})
+    //     Workout.create({})
     //     .then(data => res.json(data))
     //     .catch(err => { 
     //         res.json(err)
@@ -42,7 +42,7 @@ module.exports = function (app) {
     // });
 
     app.put("/api/workouts/:id",(req,res)=>{   
-        workout.findByIdAndUpdate(  
+        Workout.findByIdAndUpdate(  
         { _id: req.params.id },
          {
              $push:{
