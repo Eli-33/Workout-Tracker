@@ -42,14 +42,14 @@ Run node server.js at your terminal and open the browser.
 ```
 
 ## Images
-![Image]()
+![Image](https://github.com/Eli-33/Workout-Tracker/blob/main/public/img/FitnessTracker.PNG)
+![Image](https://github.com/Eli-33/Workout-Tracker/blob/main/public/img/stats.PNG)
 
 ## Deployed-at-Heroku
-![Deployed at Heroku](https://pacific-plains-88147.herokuapp.com/)
+Deployed at Heroku (https://pacific-plains-88147.herokuapp.com/)
 
 ## license
-[![License](https://img.shields.io/badge/License-MIT-<Blue>.svg)](https://shields.io/)
-
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 ## Contact
 
 GitHub: [Eli-33]()
